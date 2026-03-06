@@ -1,12 +1,23 @@
 # Create empty guest list
+guest = []
 
 # Function add_guest
-#     ask for guest name
-#     format name
-#     check if name is empty
-#     check if name already exists
-#     if valid
-#         add guest to list
+def add_guest():
+    #     ask for guest name
+    name = input("Enter guest name: ")
+    #     format name
+    name = name.strip().title()
+    #     check if name is empty
+    if not name:
+        print("Invalid guest name.")
+        return
+    #     check if name already exists
+    if name in guest:
+        print("Guest already exists.")
+        return
+    #     if valid
+    #         add guest to list
+    guest.append(name)
 
 # Function modify_guest
 #     ask which guest to modify
