@@ -59,8 +59,15 @@ def remove_guest():
         print("Guest not found.")
 
 
-# Function sort_guests
-#     sort the guest list alphabetically
+# Function to sort guests alphabetically
+def sort_guests():
+    if not guests:#check if guest list is empty
+        print("No guests to sort.")
+        return#sort guests alphabetically
+    
+    guests.sort()
+    print("Guests have been sorted alphabetically.")
+
 
 # Function show_guest_count
 #     print number of guests
