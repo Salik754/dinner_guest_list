@@ -118,3 +118,7 @@ def main():
         else:#handle invalid menu choice
             print("Invalid choice. Please try again.")
         print()  # Just adds a blank line for readability
+
+# Entry point
+if __name__ == "__main__":
+    main()
