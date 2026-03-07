@@ -69,8 +69,9 @@ def sort_guests():
     print("Guests have been sorted alphabetically.")
 
 
-# Function show_guest_count
-#     print number of guests
+# Function to show the number of guests
+def show_guest_count():
+    print(f"Total number of guests: {len(guests)}")
 
 # Function show_invitations
 #     for each guest
