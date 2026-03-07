@@ -44,10 +44,20 @@ def modify_guest():
     guests[index] = new_name
     print(f"Guest '{name}' has been updated to '{new_name}'.")
 
-# Function remove_guest
-#     ask which guest to remove
-#     if guest exists
-#         remove guest
+# Function to remove a guest
+def remove_guest():
+    if not guests:#check if guest list is empty
+        print("No guests to remove.")
+        return
+    #ask which guest to remove
+    name = input("Enter the guest name to remove: ").strip().title()
+    #check if guest exists and remove
+    if name in guests:#guest found
+        guests.remove(name)#remove guest from list
+        print(f"Guest '{name}' removed successfully!")
+    else:#guest not found
+        print("Guest not found.")
+
 
 # Function sort_guests
 #     sort the guest list alphabetically
