@@ -1,6 +1,18 @@
 # Create empty guest list
-guest = []
+guests = []
 
+
+# Function to get a properly formatted guest name with validation
+def get_guest_name(prompt):
+    while True:
+        name = input(prompt).strip().title()
+        if name == "":
+            print("Name cannot be empty. Try again.")
+        elif name in guests:
+            print("Guest already exists. Try again.")
+        else:
+            return name
+        
 # Function add_guest
 def add_guest():
     #     ask for guest name
