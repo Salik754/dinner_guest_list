@@ -73,9 +73,16 @@ def sort_guests():
 def show_guest_count():
     print(f"Total number of guests: {len(guests)}")
 
-# Function show_invitations
-#     for each guest
-#         print invitation message
+# Function to show personalized invitations
+def show_invitations():
+    if not guests:#check if guest list is empty
+        print("No guests to show invitations for.")
+        return
+    
+    print("\n--- Invitations ---")
+    for guest in guests:#show personalized invitation for each guest
+        print(f"Dear {guest}, you are invited to the dinner reception!")
+    print("------------------\n")
 
 # Main program
 #     show menu
