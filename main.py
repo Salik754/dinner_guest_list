@@ -84,7 +84,37 @@ def show_invitations():
         print(f"Dear {guest}, you are invited to the dinner reception!")
     print("------------------\n")
 
-# Main program
-#     show menu
-#     ask for choice
-#     run correct function
+# Main menu loop
+def main():
+    print("Welcome to the Reception Guest Manager!\n")
+    
+    while True:
+        print("Menu:")
+        print("1. Add guest")
+        print("2. Modify guest")
+        print("3. Remove guest")
+        print("4. Sort guests")
+        print("5. Show number of guests")
+        print("6. Show invitations")
+        print("7. Exit")
+        
+        choice = input("Enter your choice: ").strip()
+        
+        if choice == "1":# Add guest
+            add_guest()
+        elif choice == "2":# Modify guest
+            modify_guest()
+        elif choice == "3":# Remove guest
+            remove_guest()
+        elif choice == "4":# Sort guests
+            sort_guests()
+        elif choice == "5":# Show number of guests
+            show_guest_count()
+        elif choice == "6":# Show invitations
+            show_invitations()
+        elif choice == "7":# Exit
+            print("Goodbye! Thank you for using the Guest Manager.")
+            break
+        else:#handle invalid menu choice
+            print("Invalid choice. Please try again.")
+        print()  # Just adds a blank line for readability
