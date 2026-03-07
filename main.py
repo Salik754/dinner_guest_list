@@ -13,23 +13,11 @@ def get_guest_name(prompt):
         else:
             return name
         
-# Function add_guest
+# Function to add a guest
 def add_guest():
-    #     ask for guest name
-    name = input("Enter guest name: ")
-    #     format name
-    name = name.strip().title()
-    #     check if name is empty
-    if not name:
-        print("Invalid guest name.")
-        return
-    #     check if name already exists
-    if name in guest:
-        print("Guest already exists.")
-        return
-    #     if valid
-    #         add guest to list
-    guest.append(name)
+    name = get_guest_name("Enter guest name to add: ")
+    guests.append(name)
+    print(f"Guest '{name}' added successfully!")
 
 # Function modify_guest
 #     ask which guest to modify
