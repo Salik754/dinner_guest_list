@@ -19,11 +19,30 @@ def add_guest():
     guests.append(name)
     print(f"Guest '{name}' added successfully!")
 
-# Function modify_guest
-#     ask which guest to modify
-#     if guest exists
-#         ask for new name
-#         replace name
+# Function to modify a guest's name
+def modify_guest():
+    if not guests:
+        print("No guests to modify.")
+        return
+    #ask which guest to modify
+    name = input("Enter the guest name to modify: ").strip().title()
+    #check if guest exists
+    if name not in guests:
+        print("Guest not found.")
+        return
+    #ask for new name
+    new_name = input("Enter the new name: ").strip().title()
+    #validate new name
+    if new_name == "":
+        print("Name cannot be empty.")
+        return
+    elif new_name in guests:
+        print("Duplicate name not allowed.")
+        return
+    #update guest name
+    index = guests.index(name)
+    guests[index] = new_name
+    print(f"Guest '{name}' has been updated to '{new_name}'.")
 
 # Function remove_guest
 #     ask which guest to remove
