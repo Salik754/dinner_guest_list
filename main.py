@@ -1,3 +1,7 @@
+"""The main function for this game is to handle a bunch of stuff for the dinner party, related to the guests. The game has a total of 8 functions.
+
+"""
+
 # Create empty guest list
 guests = []
 
